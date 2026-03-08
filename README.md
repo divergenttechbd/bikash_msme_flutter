@@ -63,17 +63,26 @@ dependencies:
       ref: main  # or specify a tag/commit hash
 ```
 
-#### Option 2: Using command line
+#### Option 2: Manual pubspec.yaml edit (Recommended for GitHub)
 
-Install directly from GitHub:
+The most reliable way to install from GitHub is to manually edit your `pubspec.yaml` file:
 
-```bash
-flutter pub add git:https://github.com/divergenttechbd/bikash_msme_flutter.git
+1. Open your `pubspec.yaml` file
+2. Add the following dependency:
+
+```yaml
+dependencies:
+  msme_sdk:
+    git:
+      url: https://github.com/divergenttechbd/bikash_msme_flutter.git
+      ref: main  # or specify a tag/commit hash
 ```
+
+3. Run `flutter pub get` to install the package
 
 #### Option 3: Specific version/tag
 
-To install a specific version or tag:
+To install a specific version or tag, use the same method with a specific ref:
 
 ```yaml
 dependencies:
@@ -83,11 +92,7 @@ dependencies:
       ref: v1.0.0  # specific tag
 ```
 
-Or using command line with specific tag:
-
-```bash
-flutter pub add git:https://github.com/divergenttechbd/bikash_msme_flutter.git#v1.0.0
-```
+Then run `flutter pub get` to install.
 
 > **Note:** When installing from GitHub, make sure to specify the correct branch, tag, or commit hash using the `ref` parameter.
 
