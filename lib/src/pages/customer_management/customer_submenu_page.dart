@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
-import './customer_management/customer_submenu_page.dart';
-import './stock_management/stock_submenu_page.dart';
-import './order_management/order_submenu_page.dart';
-import './cashbox/cashbox_page.dart';
-import './business_notes/business_notes_page.dart';
+import 'customer_list_page.dart';
+import 'add_customer_page.dart';
 
-class MenuPage extends StatelessWidget {
-  const MenuPage({super.key});
+class CustomerSubmenuPage extends StatelessWidget {
+  const CustomerSubmenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('MSME Menu'),
+        title: const Text('Customer/Supplier Management'),
         backgroundColor: Colors.blue[800],
         foregroundColor: Colors.white,
         elevation: 0,
@@ -41,7 +38,7 @@ class MenuPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Welcome to MSME Platform',
+                      'Customer/Supplier',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
@@ -50,7 +47,7 @@ class MenuPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Business Operation Platform',
+                      'Manage your customers and suppliers',
                       style: TextStyle(
                         color: Colors.blue[200],
                         fontSize: 16,
@@ -61,7 +58,7 @@ class MenuPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               const Text(
-                'Services',
+                'Actions',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -75,75 +72,27 @@ class MenuPage extends StatelessWidget {
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
                   children: [
-                _buildMenuCard(
-                  icon: Icons.people,
-                  title: 'Customer/Supplier',
-                  subtitle: 'Manage contacts',
-                  color: Colors.blue,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const CustomerSubmenuPage()),
-                  ),
-                ),
-                _buildMenuCard(
-                  icon: Icons.inventory,
-                  title: 'Stock Management',
-                  subtitle: 'Manage inventory',
-                  color: Colors.green,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const StockSubmenuPage()),
-                  ),
-                ),
-                _buildMenuCard(
-                  icon: Icons.receipt_long,
-                  title: 'Order Management',
-                  subtitle: 'Manage orders',
-                  color: Colors.orange,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const OrderSubmenuPage()),
-                  ),
-                ),
-                _buildMenuCard(
-                  icon: Icons.business,
-                  title: 'Multi-Business',
-                  subtitle: 'Manage businesses',
-                  color: Colors.purple,
-                ),
-                _buildMenuCard(
-                  icon: Icons.account_balance_wallet,
-                  title: 'Cashbox',
-                  subtitle: 'Manage cash',
-                  color: Colors.teal,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const CashboxPage()),
-                  ),
-                ),
-                _buildMenuCard(
-                  icon: Icons.note_add,
-                  title: 'Business Notes',
-                  subtitle: 'Manage notes',
-                  color: Colors.brown,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const BusinessNotesPage()),
-                  ),
-                ),
-                _buildMenuCard(
-                  icon: Icons.analytics,
-                  title: 'Analytics',
-                  subtitle: 'Business insights',
-                  color: Colors.red,
-                ),
-                _buildMenuCard(
-                  icon: Icons.settings,
-                  title: 'Settings',
-                  subtitle: 'Preferences',
-                  color: Colors.grey,
-                ),
-              ],
+                    _buildMenuCard(
+                      icon: Icons.list,
+                      title: 'View All',
+                      subtitle: 'List customers & suppliers',
+                      color: Colors.blue,
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const CustomerListPage()),
+                      ),
+                    ),
+                    _buildMenuCard(
+                      icon: Icons.person_add,
+                      title: 'Add New',
+                      subtitle: 'Create customer or supplier',
+                      color: Colors.green,
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const AddCustomerPage()),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

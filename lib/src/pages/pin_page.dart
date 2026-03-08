@@ -56,7 +56,7 @@ class _PinPageState extends State<PinPage> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('MSME SDK'),
+        title: const Text('MSME Business Operation'),
         backgroundColor: Colors.blue[800],
         foregroundColor: Colors.white,
         elevation: 0,
