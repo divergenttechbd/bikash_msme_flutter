@@ -32,6 +32,8 @@ A comprehensive Flutter SDK for integrating MSME (Micro, Small, and Medium Enter
 
 ## 📦 Installation
 
+### From pub.dev (Recommended)
+
 Add this package to your `pubspec.yaml` file:
 
 ```yaml
@@ -44,6 +46,50 @@ Or install it using the command line:
 ```bash
 flutter pub add msme_sdk
 ```
+
+### From GitHub Repository
+
+You can also install directly from the GitHub repository:
+
+#### Option 1: Using pubspec.yaml
+
+Add the GitHub repository to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  msme_sdk:
+    git:
+      url: https://github.com/divergenttechbd/bikash_msme_flutter.git
+      ref: main  # or specify a tag/commit hash
+```
+
+#### Option 2: Using command line
+
+Install directly from GitHub:
+
+```bash
+flutter pub add --git-url=https://github.com/divergenttechbd/bikash_msme_flutter.git --ref=main
+```
+
+#### Option 3: Specific version/tag
+
+To install a specific version or tag:
+
+```yaml
+dependencies:
+  msme_sdk:
+    git:
+      url: https://github.com/divergenttechbd/bikash_msme_flutter.git
+      ref: v1.0.0  # specific tag
+```
+
+Or using command line:
+
+```bash
+flutter pub add --git-url=https://github.com/divergenttechbd/bikash_msme_flutter.git --ref=v1.0.0
+```
+
+> **Note:** When installing from GitHub, make sure to specify the correct branch, tag, or commit hash using the `ref` parameter.
 
 Then import the package in your Dart code:
 
