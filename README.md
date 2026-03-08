@@ -68,7 +68,7 @@ dependencies:
 Install directly from GitHub:
 
 ```bash
-flutter pub add --git-url=https://github.com/divergenttechbd/bikash_msme_flutter.git --ref=main
+flutter pub add git:https://github.com/divergenttechbd/bikash_msme_flutter.git
 ```
 
 #### Option 3: Specific version/tag
@@ -83,10 +83,10 @@ dependencies:
       ref: v1.0.0  # specific tag
 ```
 
-Or using command line:
+Or using command line with specific tag:
 
 ```bash
-flutter pub add --git-url=https://github.com/divergenttechbd/bikash_msme_flutter.git --ref=v1.0.0
+flutter pub add git:https://github.com/divergenttechbd/bikash_msme_flutter.git#v1.0.0
 ```
 
 > **Note:** When installing from GitHub, make sure to specify the correct branch, tag, or commit hash using the `ref` parameter.
